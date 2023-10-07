@@ -30,7 +30,8 @@ public class NotificationService {
             throw new RuntimeException("Нет соответствия шаблону! ");
         }
         NotificationTaskExecute notificationTask = new NotificationTaskExecute();
-        notificationTask.setDateSendNotification(Timestamp.valueOf(LocalDateTime.parse(matcher.group(1), DateTimeFormatter.ISO_DATE)));
+        notificationTask.setDateSendNotification(Timestamp.valueOf(LocalDateTime.parse(matcher.group(1), DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")))
+        );
         notificationTask.setNotification(matcher.group(3));
         return notificationTask;
     }
