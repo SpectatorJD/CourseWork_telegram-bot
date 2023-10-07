@@ -1,4 +1,4 @@
-package pro.sky.telegrambot.configuration;
+package pro.sky.telegrambot.exception;
 
 public class TelegramApiException extends Exception {
 }
