@@ -18,6 +18,7 @@ public class NotificationService {
     NotificationTaskRepository notificationTaskRepository;
     static final Pattern pattern = Pattern.compile("([0-9\\.\\:\\s]{16})(\\s)([\\W+]+)");
 
+
     public void createNewTask(String message, long chatId) throws ParseException {
         NotificationTaskExecute notificationTask = this.parseTaskString(message);
         notificationTask.setChatId(chatId);
