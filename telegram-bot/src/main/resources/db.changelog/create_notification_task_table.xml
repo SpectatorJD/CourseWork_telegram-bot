@@ -18,5 +18,5 @@
             <column name="date_send_notification" type="TIMESTAMP">
             </column>
         </createTable>
-    </changeSet>
+     </changeSet>
 </databaseChangeLog>
