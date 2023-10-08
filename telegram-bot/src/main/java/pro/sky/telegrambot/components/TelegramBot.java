@@ -4,13 +4,11 @@ import lombok.AllArgsConstructor;
 import org.springframework.expression.ParseException;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import pro.sky.telegrambot.configuration.TelegramBotConfiguration;
 import pro.sky.telegrambot.service.NotificationService;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-
-import java.util.List;
 
 @Component
 @AllArgsConstructor
@@ -77,17 +75,5 @@ public class TelegramBot extends TelegramLongPollingBot {
         }
 
 
-    }
-
-    @Override
-    public void onUpdatesReceived(List<Update> updates) {
-        super.onUpdatesReceived(updates);
-    }
-
-
-
-    @Override
-    public void onRegister() {
-        super.onRegister();
     }
 }
