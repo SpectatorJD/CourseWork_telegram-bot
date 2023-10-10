@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                   http://www.liquibase.org/xml/ns/dbchangelog-ext
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="4f7c1c7d-1cc2-487f-add1-75fe94600115" author="Dmitriy">
+        <createTable tableName="notification_task">
+            <column name="id" type="bigint"  autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="chat_id" type="bigint">
+            </column>
+            <column name="notification" type="text">
+            </column>
+            <column name="date_send_notification" type="TIMESTAMP">
+            </column>
+        </createTable>
+     </changeSet>
+</databaseChangeLog>
